@@ -14,6 +14,11 @@ Which E2E is this failing?:
 $ kubectl apply -f svc-udp-crash.yaml
 ```
 
+# Listening the port 80
+```
+tcpdump 'port 80'
+```
+
 # Listining the service
 ```
 $ kubectl get svc -n conntrack-3252
@@ -93,4 +98,11 @@ $ kpng/hack/temp/e2e> ./ginkgo --nodes="26" \
         --dump-logs-on-failure=false \
         --report-dir="artifacts/reports" \
         --disable-log-dump=true
+```
+
+
+# Alpine machines add tcpdump pkg
+```
+# apk add tcpdump
+# tcpdump 'port 80'
 ```
