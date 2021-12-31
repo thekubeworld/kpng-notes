@@ -9,6 +9,7 @@ Protocol: UDP
 Which E2E is this failing?: 
 "should be able to preserve UDP traffic when server pod cycles for a ClusterIP service"
 
+Github Issue: https://github.com/kubernetes-sigs/kpng/issues/174
 
 ```
 $ kubectl apply -f svc-udp-crash.yaml
