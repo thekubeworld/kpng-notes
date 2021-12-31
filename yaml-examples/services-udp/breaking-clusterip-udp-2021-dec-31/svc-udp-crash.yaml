@@ -1,0 +1,50 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  creationTimestamp: "2021-12-31T14:16:23Z"
+  labels:
+    kubernetes.io/metadata.name: conntrack-3252
+  name: conntrack-3252
+  resourceVersion: "1235"
+  uid: e799c1b7-39cb-4a4b-9539-026b8e731b65
+spec:
+  finalizers:
+  - kubernetes
+status:
+  phase: Active
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Service
+  metadata:
+    creationTimestamp: "2021-12-31T14:13:03Z"
+    labels:
+      testid: svc-udp-d11ffb2a-94b2-4a8d-816b-3e84f35794b1
+    name: svc-udp
+    namespace: conntrack-3252
+    resourceVersion: "788"
+    uid: 811c36e8-5f0d-47a7-a7af-06a6bb009721
+  spec:
+    clusterIP: 10.96.88.17
+    clusterIPs:
+    - 10.96.88.17
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: udp
+      port: 80
+      protocol: UDP
+      targetPort: 80
+    selector:
+      testid: svc-udp-d11ffb2a-94b2-4a8d-816b-3e84f35794b1
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+kind: List
+metadata:
+  resourceVersion: ""
+  selfLink: ""
