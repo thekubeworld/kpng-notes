@@ -107,3 +107,11 @@ $ kpng/hack/temp/e2e> ./ginkgo --nodes="26" \
 # apk add tcpdump
 # tcpdump 'port 80'
 ```
+
+# netexec
+
+```
+From:  https://pkg.go.dev/k8s.io/kubernetes@v1.21.3/test/images/agnhost/netexec  
+Short: "Creates HTTP(S), UDP, and (optionally) SCTP servers with various endpoints"  
+Long: `Starts a HTTP(S) server on given port with the following endpoints:  
+```
